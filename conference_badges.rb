@@ -7,10 +7,11 @@ def batch_badge_creator(attendees)
   attendees.each do |badges| 
     myspeaker = "Hello, my name is #{badges}."
     speaker << myspeaker
-    end
-    speaker
+  end
+  speaker
 end
-  def assign_rooms(speakers)
+  
+def assign_rooms(speakers)
     rooms = 1
     newroom =[]
     speakers.each do |assign|
@@ -19,13 +20,13 @@ end
       rooms += 1
     end
     newroom
-  end
+end
   
-  def printer(array)
-    batch_badge_creator(attendees).map do |map|
+def printer(array)
+  batch_badge_creator(array).map do |map|
       puts map
- end
+  end
      assign_rooms(array).map do |rooms|
        puts rooms
-     end
     end
+end
